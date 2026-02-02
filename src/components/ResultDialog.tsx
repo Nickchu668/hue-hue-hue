@@ -86,14 +86,15 @@ export const ResultDialog: React.FC<ResultDialogProps> = ({
                 </motion.p>
 
                 {isBelowAverage && (
-                  <motion.p
-                    className="text-sm text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950 p-3 rounded-lg"
+                  <motion.div
+                    className="text-sm text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950 p-4 rounded-lg"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6 }}
                   >
-                    ⚠️ {t('belowAverage')}
-                  </motion.p>
+                    <span className="text-5xl block mb-2">⚠️</span>
+                    <p>{t('belowAverage')}</p>
+                  </motion.div>
                 )}
 
                 {isAllComplete && (
