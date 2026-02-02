@@ -51,14 +51,14 @@ export interface Translations {
 }
 
 export const LEVEL_CONFIGS: LevelConfig[] = [
-  { level: 1, gridCols: 3, gridRows: 3, cellSize: 120, deltaE: 4 },
-  { level: 2, gridCols: 3, gridRows: 3, cellSize: 110, deltaE: 3.5 },
-  { level: 3, gridCols: 3, gridRows: 3, cellSize: 100, deltaE: 3 },
-  { level: 4, gridCols: 4, gridRows: 4, cellSize: 90, deltaE: 2.5 },
-  { level: 5, gridCols: 4, gridRows: 4, cellSize: 80, deltaE: 2 },
-  { level: 6, gridCols: 5, gridRows: 5, cellSize: 70, deltaE: 1.8 },
-  { level: 7, gridCols: 5, gridRows: 5, cellSize: 65, deltaE: 1.5 },
-  { level: 8, gridCols: 5, gridRows: 5, cellSize: 60, deltaE: 1.2 },
+  { level: 1, gridCols: 3, gridRows: 3, cellSize: 120, deltaE: 8 },
+  { level: 2, gridCols: 3, gridRows: 3, cellSize: 110, deltaE: 7 },
+  { level: 3, gridCols: 3, gridRows: 3, cellSize: 100, deltaE: 6 },
+  { level: 4, gridCols: 4, gridRows: 4, cellSize: 90, deltaE: 5 },
+  { level: 5, gridCols: 4, gridRows: 4, cellSize: 80, deltaE: 4 },
+  { level: 6, gridCols: 5, gridRows: 5, cellSize: 70, deltaE: 3.5 },
+  { level: 7, gridCols: 5, gridRows: 5, cellSize: 65, deltaE: 3 },
+  { level: 8, gridCols: 5, gridRows: 5, cellSize: 60, deltaE: 2.5 },
   { level: 9, gridCols: 5, gridRows: 6, cellSize: 55, deltaE: 0.8 },
   { level: 10, gridCols: 5, gridRows: 6, cellSize: 50, deltaE: 0.5 },
 ];
