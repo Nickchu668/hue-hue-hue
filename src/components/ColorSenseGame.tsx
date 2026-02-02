@@ -98,7 +98,7 @@ const ColorSenseGame: React.FC = () => {
 
       {/* Result Dialog */}
       <ResultDialog
-        open={gameState.isGameOver || gameState.isAllComplete}
+        open={gameState.showGameOverDialog || gameState.isAllComplete}
         language={language}
         level={gameState.currentLevel}
         isAllComplete={gameState.isAllComplete}

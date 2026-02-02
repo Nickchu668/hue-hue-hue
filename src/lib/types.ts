@@ -21,6 +21,7 @@ export interface GameState {
   baseColor: string;
   differentColor: string;
   showCorrectAnswer: boolean;
+  showGameOverDialog: boolean;
   colorBlindMode: boolean;
 }
 
