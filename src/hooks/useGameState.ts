@@ -26,6 +26,7 @@ export function useGameState() {
     baseColor: '#888888',
     differentColor: '#888888',
     showCorrectAnswer: false,
+    showGameOverDialog: false,
     colorBlindMode: false,
   });
 
@@ -145,7 +146,7 @@ export function useGameState() {
       const newLives = gameState.remainingLives - 1;
       
       if (newLives <= 0) {
-        // Game over
+        // Game over - first show correct answer
         playGameOverSound();
         const newBest = gameState.bestRecord === null || gameState.currentLevel - 1 > gameState.bestRecord
           ? gameState.currentLevel - 1
@@ -156,8 +157,17 @@ export function useGameState() {
           isGameOver: true,
           isPlaying: false,
           showCorrectAnswer: true,
+          showGameOverDialog: false,
           bestRecord: newBest > 0 ? newBest : prev.bestRecord,
         }));
+        
+        // Show game over dialog after delay
+        setTimeout(() => {
+          setGameState((prev) => ({
+            ...prev,
+            showGameOverDialog: true,
+          }));
+        }, 2000);
       } else {
         setGameState((prev) => ({
           ...prev,
@@ -187,6 +197,7 @@ export function useGameState() {
       isLevelComplete: false,
       isAllComplete: false,
       showCorrectAnswer: false,
+      showGameOverDialog: false,
     }));
   }, []);
 
