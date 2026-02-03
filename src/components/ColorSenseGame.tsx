@@ -103,6 +103,7 @@ const ColorSenseGame: React.FC = () => {
         level={gameState.currentLevel}
         isAllComplete={gameState.isAllComplete}
         onRetry={startGame}
+        onBackToHome={resetGame}
       />
     </div>
   );
