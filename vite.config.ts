@@ -5,8 +5,10 @@ import { componentTagger } from "lovable-tagger";
 import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+
 export default defineConfig(({ mode }) => ({
-  base: '/hue-hue-hue/',
+  base: isGitHubPages ? '/hue-hue-hue/' : '/',
   server: {
     host: "::",
     port: 8080,
