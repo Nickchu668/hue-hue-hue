@@ -35,6 +35,7 @@ export interface Translations {
   reset: string;
   nextLevel: string;
   retry: string;
+  backToHome: string;
   levelComplete: string;
   gameOver: string;
   allComplete: string;

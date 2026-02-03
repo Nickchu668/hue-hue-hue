@@ -12,6 +12,7 @@ interface ResultDialogProps {
   level: number;
   isAllComplete: boolean;
   onRetry: () => void;
+  onBackToHome: () => void;
 }
 
 export const ResultDialog: React.FC<ResultDialogProps> = ({
@@ -20,6 +21,7 @@ export const ResultDialog: React.FC<ResultDialogProps> = ({
   level,
   isAllComplete,
   onRetry,
+  onBackToHome,
 }) => {
   const { t } = useTranslation(language);
 
@@ -50,7 +52,7 @@ export const ResultDialog: React.FC<ResultDialogProps> = ({
   return (
     <AnimatePresence>
       {open && (
-        <Dialog open={open} onOpenChange={(isOpen) => !isOpen && onRetry()}>
+        <Dialog open={open} onOpenChange={(isOpen) => !isOpen && onBackToHome()}>
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
               <DialogTitle className="text-center text-2xl">
@@ -117,6 +119,9 @@ export const ResultDialog: React.FC<ResultDialogProps> = ({
               </Button>
               <Button onClick={onRetry} className="w-full">
                 {t('retry')}
+              </Button>
+              <Button onClick={onBackToHome} variant="ghost" className="w-full">
+                {t('backToHome')}
               </Button>
             </div>
           </DialogContent>
