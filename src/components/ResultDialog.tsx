@@ -50,7 +50,7 @@ export const ResultDialog: React.FC<ResultDialogProps> = ({
   return (
     <AnimatePresence>
       {open && (
-        <Dialog open={open}>
+        <Dialog open={open} onOpenChange={(isOpen) => !isOpen && onRetry()}>
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
               <DialogTitle className="text-center text-2xl">

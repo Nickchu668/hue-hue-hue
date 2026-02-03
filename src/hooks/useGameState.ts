@@ -111,6 +111,7 @@ export function useGameState() {
       isLevelComplete: false,
       isAllComplete: false,
       showCorrectAnswer: false,
+      showGameOverDialog: false,
     }));
     generateLevel(1);
   }, [generateLevel]);
